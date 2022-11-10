@@ -17,6 +17,14 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
+        a {
+            color: #242424;
+            text-decoration: none;
+            &:hover {
+                color: #242424;
+                text-decoration: underline;
+            }
+        }
     }
     &__country {
         grid-column: 2/3;

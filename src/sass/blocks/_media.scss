@@ -1,0 +1,196 @@
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            column-gap: 10px;
+        }
+    }
+    .promo {
+        &__title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        &__subtitle {
+            font-size: 23px;
+            line-height: 26px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    .contacts {
+        display: none;
+    }
+    .promo {
+        &__wrapper {
+            grid-template-columns: 140px 480px;
+        }
+        &__list {
+            margin-top: 35px;
+        }
+        &__slider-content {
+            grid-template-columns: 360px 340px;
+            grid-template-rows: 195px 53px 170px;
+            gap: 15px;
+        }
+        &__title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__btn {
+            width: 210px;
+            height: 56px;
+        }
+        .slick-initialized {
+            .slick-dots {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    .promo {
+        .hamburger {
+            display: flex;
+        }
+        &__wrapper {
+            grid-template-columns: 140px;
+        }
+        &__menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.6s;
+            &.active {
+                left: 0;
+                visibility: visible;
+                opacity: 1;
+                .promo__overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    opacity: 0.75;
+                    z-index: 4;
+                }
+            }
+        }
+        &__block {
+            position: relative;
+            width: 345px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        &__close {
+            display: block;
+            position: absolute;
+            color: #FFF;
+            font-size: 54px;
+            line-height: 30px;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+        }
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        &__link {
+            margin: 16px 0;
+            a {
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+        &__slider-content {
+            grid-template-columns: 280px 240px;
+            grid-template-rows: auto auto 170px;
+            row-gap: 20px;
+        }
+        &__title {
+            grid-column: 1/3;
+            margin-bottom: 0;
+            text-align: center;
+            font-size: 33px;
+        }
+        &__subtitle {
+            grid-column: 1/2;
+            font-size: 22px;
+            line-height: 28px;
+            align-self: center;
+        }
+        &__btn {
+            margin-top: 0;
+        }
+        &__img {
+            grid-row: 2/4;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .promo {
+        &__slider-content {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto 160px;
+            row-gap: 30px;
+            img {
+                display: none;
+            }
+        }
+        &__title {
+            grid-column: unset;
+        }
+        &__subtitle {
+            text-align: center;
+            font-size: 20px;
+        }
+        &__btn {
+            justify-self: center;
+        }
+        &__img {
+            display: none;
+        }
+        .slick-initialized {
+            .slick-dots {
+                transform: translateX(-50%);
+                bottom: 50px
+            }
+        }
+        &__block {
+            width: 250px;
+        }
+        &__list {
+            text-align: center;
+        }
+    }
+}
