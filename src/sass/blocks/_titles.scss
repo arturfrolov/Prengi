@@ -3,4 +3,9 @@
     font-size: 30px;
     line-height: 36px;
     font-weight: 900;
+    text-align: center;
+    margin-bottom: 0;
+    &__black {
+        color: #393939;
+    }
 }
